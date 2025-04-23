@@ -1,4 +1,5 @@
 🖼️ Edge Detection Web App
+
 This is a simple yet effective web-based application for edge detection using Sobel, Prewitt, and Canny operators. Built with Flask and OpenCV, the app allows users to upload an image and view edge-detected outputs using different filters—all from a sleek browser interface.
 
 🔍 Features
