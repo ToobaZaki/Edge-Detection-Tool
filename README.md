@@ -1,26 +1,20 @@
-# Edge-Detection-Tool
-
 🖼️ Edge Detection Web App
-This is a simple yet effective web-based application for edge detection using Sobel, Prewitt, and Canny operators. Built with Flask and OpenCV, the app allows users to upload an image and view edge-detected outputs using different filters—all from a sleek browser interface.
+A simple web-based application for edge detection using Sobel, Prewitt, and Canny operators. Built with Flask and OpenCV, it lets users upload an image and view processed outputs with a stylish interface.
 
 🔍 Features
-📤 Upload any image (JPG, PNG, etc.)
+📤 Upload an image (PNG, JPG, etc.)
 
-⚙️ Automatically apply:
+⚙️ Apply:
 
-Sobel Operator
+Sobel
 
-Prewitt Operator
+Prewitt
 
-Canny Edge Detection
+Canny
 
-🖥️ Display original and processed images side-by-side
+🖥️ See original and edge-detected results
 
-🎨 Clean, modern UI with responsive design
-
-📸 Live Preview
-Upload → Detect → Compare Results
-Simple and intuitive UI built with HTML/CSS and Flask templates.
+🎨 Modern UI with clean visuals
 
 🚀 Getting Started
 Prerequisites
@@ -29,14 +23,14 @@ Python 3.x
 pip
 
 Installation
+Clone the repository and install the dependencies:
+
 bash
 Copy
 Edit
-# Clone the repository
 git clone https://github.com/yourusername/edge-detection-app.git
 cd edge-detection-app
 
-# Install dependencies
 pip install flask opencv-python
 Run the App
 bash
@@ -44,24 +38,24 @@ Copy
 Edit
 python app.py
 Then open your browser and go to:
-http://127.0.0.1:5000
 
+cpp
+Copy
+Edit
+http://127.0.0.1:5000
 📁 Project Structure
 php
 Copy
 Edit
-├── app.py                 # Flask application with OpenCV logic
+├── app.py                 # Main Flask app
 ├── templates/
-│   ├── index.html         # Upload form UI
-│   └── results.html       # Results display UI
+│   ├── index.html         # Upload page
+│   └── results.html       # Edge detection result display
 └── static/
-    └── uploads/           # Automatically generated subfolders for saving results
+    └── uploads/           # Subfolders created for:
         ├── original/
         ├── sobel/
         ├── prewitt/
         └── canny/
 ✨ Author
-Tooba Zaki
-19713
-Passionate about image processing and intuitive UIs.
-
+Tooba Zak+++
