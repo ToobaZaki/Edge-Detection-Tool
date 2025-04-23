@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge Detection</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0 0 1.5rem 0;
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+        .upload-form {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        .file-label {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            display: inline-block;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        .file-label:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .submit-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+        #file-name {
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Made By Tooba Zaki (19713) </h1>
+        <h1>Edge Detection</h1>
+        <div class="upload-form">
+            <form action="/detect_edges" method="post" enctype="multipart/form-data">
+                <label for="file-input" class="file-label">Choose Image</label>
+                <input id="file-input" type="file" name="file" accept="image/*" required onchange="updateFileName(this)">
+                <div id="file-name">No file chosen</div>
+                <button type="submit" class="submit-btn">Detect Edges</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function updateFileName(input) {
+            const fileName = input.files[0]?.name || 'No file chosen';
+            document.getElementById('file-name').textContent = fileName;
+        }
+    </script>
+</body>
+</html>
