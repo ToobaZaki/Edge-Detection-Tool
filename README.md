@@ -30,6 +30,7 @@ git clone https://github.com/yourusername/edge-detection-app.git
 cd edge-detection-app
 
 # Install dependencies
+
 pip install flask opencv-python
 
 Run the App
@@ -40,19 +41,5 @@ Then open your browser and go to:
 
 http://127.0.0.1:5000
 
-📁 Project Structure
-php
-Copy
-Edit
-├── app.py                 # Flask application with OpenCV logic
-├── templates/
-│   ├── index.html         # Upload form UI
-│   └── results.html       # Results display UI
-└── static/
-    └── uploads/           # Automatically generated subfolders for saving results
-        ├── original/
-        ├── sobel/
-        ├── prewitt/
-        └── canny/
 ✨ Author
 Tooba Zaki
